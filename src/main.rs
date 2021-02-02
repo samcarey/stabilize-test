@@ -19,7 +19,7 @@ fn main() {
         .add_startup_system(add_lighting.system())
         .add_startup_system(add_camera.system())
         .add_startup_system(turn_off_gravity.system())
-        .add_system(orient.system())
+        .add_system(stabilize.system())
         .add_resource(Perturbed(false))
         .add_resource(TargetOrientation(
             Quat::from_xyzw(1.0, 2.0, 3.0, 4.0).normalize(),
@@ -89,7 +89,7 @@ fn perturb(
 
 struct TargetOrientation(Quat);
 
-fn orient(
+fn stabilize(
     target_orientation: Res<TargetOrientation>,
     parts: Query<(&Transform, &RigidBodyHandleComponent)>,
     mut bodies: ResMut<RigidBodySet>,
