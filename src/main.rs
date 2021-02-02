@@ -1,4 +1,3 @@
-use bevy::render::pass::ClearColor;
 use bevy::{core::FixedTimestep, prelude::*};
 use bevy_rapier3d::{
     physics::{RapierConfiguration, RapierPhysicsPlugin, RigidBodyHandleComponent},
