@@ -2041,18 +2041,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13bd41f508810a131401606d54ac32a467c97172d74ba7662562ebba5ad07fa0"
 
 [[package]]
-name = "orient"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy_rapier3d",
- "log",
- "nalgebra",
- "rand 0.8.3",
- "rapier3d",
-]
-
-[[package]]
 name = "owned_ttf_parser"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2599,6 +2587,18 @@ checksum = "1f5b132530b1ac069df335577e3581765995cba5a13995cdbbdbc8fb057c532c"
 dependencies = [
  "bitflags",
  "num-traits",
+]
+
+[[package]]
+name = "stabilize-test"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_rapier3d",
+ "log",
+ "nalgebra",
+ "rand 0.8.3",
+ "rapier3d",
 ]
 
 [[package]]
