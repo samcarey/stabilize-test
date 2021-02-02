@@ -1,0 +1,31 @@
+[package]
+name = "orient"
+version = "0.1.0"
+authors = ["Sam Carey <sam@samcarey.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = {version="0.4.0", default-features=false}
+bevy_rapier3d = { version = "0.8.0" }
+nalgebra = "0.24.1"
+rapier3d = "0.5.0"
+log = "0.4"
+rand = "0.8.3"
+
+
+[profile.dev]
+opt-level = 3
+debug = 0
+
+[features]
+default = [
+  "bevy_rapier3d/simd-stable",
+  "bevy/bevy_winit",
+  "bevy/render",
+  "bevy/bevy_wgpu",
+  "bevy/bevy_gltf",
+  "bevy_rapier3d/parallel",
+]
+
