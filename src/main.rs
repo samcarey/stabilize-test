@@ -98,7 +98,7 @@ fn stabilize(
         if let Some(rb) = bodies.get_mut(part_rb_handle.handle()) {
             let stiffness = 30f32;
             let damping = 2.0 * stiffness.sqrt(); // critically damped
-            let rotation_between = transform.rotation.conjugate() * target_orientation.0;
+            let rotation_between = target_orientation.0 * transform.rotation.conjugate();
             let (rotation_axis, rotation_angle) = rotation_between.to_axis_angle();
             let rotation_vector = rotation_axis * rotation_angle;
             let rotation_vector =
